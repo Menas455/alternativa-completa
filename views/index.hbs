@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Imágenes</title>
+</head>
+<body>
+    <form action="/" method="post" enctype="multipart/form-data">
+    <input type="file" id="imagen" name="imagen">
+    <br>
+    <input type="submit">
+    </form>
+        <br><br>
+    <h1>Imágenes almacenadas en la base de datos:</h1> 
+    {{#each imagenes}} 
+    <img src="data:image/jpeg;base64,{{this.imagen_base64}}" alt="imagen"> 
+    {{/each}}
+</body>
+</html>
